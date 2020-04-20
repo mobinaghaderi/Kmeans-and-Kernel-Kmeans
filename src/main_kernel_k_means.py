@@ -41,9 +41,9 @@ if __name__ == "__main__":
     data=np.array(data)
     p = plt.figure(1)
     plt.scatter(data[:,0],data[:,1],20,groundtruth)
-    P.show()
+    p.show()
 
-    b =plt.figure(2)
+    pl =plt.figure(2)
     plt.scatter(data[:,0],data[:,1],20,results)
-    b.show()
+    pl.show()
 
