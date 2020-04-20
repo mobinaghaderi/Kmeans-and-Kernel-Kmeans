@@ -34,7 +34,8 @@ if __name__ == "__main__":
     print "Purity =", res_Purity
     print "NMI = ", res_NMI
     
-    from matplotlib import pyplot as plt
+    %matplotlib inline
+    import matplotlib.pyplot as plt
     import numpy as np
     data=np.array(data)
     p = plt.figure(1)
@@ -44,4 +45,4 @@ if __name__ == "__main__":
     pl =plt.figure(2)
     plt.scatter(data[:,0],data[:,1],20,results)
     pl.show()
-    input()
+
