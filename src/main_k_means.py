@@ -44,3 +44,4 @@ if __name__ == "__main__":
     pl =plt.figure(2)
     plt.scatter(data[:,0],data[:,1],20,results)
     pl.show()
+    input()
