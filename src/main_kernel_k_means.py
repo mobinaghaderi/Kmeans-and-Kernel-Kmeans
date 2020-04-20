@@ -35,10 +35,15 @@ if __name__ == "__main__":
     
     print "Purity =", res_Purity
     print "NMI = ", res_NMI
+
     from matplotlib import pyplot as plt
     import numpy as np
-    data2=np.array(data)
-    d =plt.figure(1)
-    plt.scatter(data2[:,0],data2[:,1],20,results)
-    d.show()
+    data=np.array(data)
+    p = plt.figure(1)
+    plt.scatter(data[:,0],data[:,1],20,groundtruth)
+    P.show()
+
+    b =plt.figure(2)
+    plt.scatter(data[:,0],data[:,1],20,results)
+    b.show()
 
