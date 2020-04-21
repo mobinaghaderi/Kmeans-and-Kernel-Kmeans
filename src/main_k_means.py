@@ -27,16 +27,27 @@ if __name__ == "__main__":
 
     # get clusterID, list
     results = kmeans(data, centers) 
+    
+    
+    #figure
+    import numpy as np
+    from matplotlib import pyplot as plt
+
+    kmeans = kmeans(data, centers) 
+    labels = kmeans.fit(X).predict(X)
+    data2=np.array(data)
+    plt.scatter(X[:, 0], X[:, 1], c=labels, s=40, cmap='viridis');
+  
 
     res_Purity = purity(groundtruth, results) 
     res_NMI = NMI(groundtruth, results) 
     
     print "Purity =", res_Purity
     print "NMI = ", res_NMI
-    
-    from matplotlib import pyplot as plt
-    import numpy as np
-    data2=np.array(data)
-    d =plt.figure(1)
-    plt.scatter(data2[:,0],data2[:,1],20,results)
-    d.show()
+  
+   # from matplotlib import pyplot as plt
+  #  import numpy as np
+  #  data2=np.array(data)
+  #  d =plt.figure(1)
+  #  plt.scatter(data2[:,0],data2[:,1],20,results)
+  #  d.show()
