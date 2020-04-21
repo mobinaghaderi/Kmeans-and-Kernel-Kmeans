@@ -32,10 +32,11 @@ if __name__ == "__main__":
     #figure
     import numpy as np
     from matplotlib import pyplot as plt
+    d =plt.figure(1)
     data2=np.array(data)
     kmeans = kmeans(data, centers) 
     plt.scatter(data2[:, 0], data2[:, 1], c=groundtruth, s=40, cmap='viridis');
-  
+    d.show()
 
     res_Purity = purity(groundtruth, results) 
     res_NMI = NMI(groundtruth, results) 
