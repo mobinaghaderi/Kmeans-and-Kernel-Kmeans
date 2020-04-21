@@ -32,11 +32,9 @@ if __name__ == "__main__":
     #figure
     import numpy as np
     from matplotlib import pyplot as plt
-
-    kmeans = kmeans(data, centers) 
-    labels = kmeans.fit(X).predict(X)
     data2=np.array(data)
-    plt.scatter(X[:, 0], X[:, 1], c=labels, s=40, cmap='viridis');
+    kmeans = kmeans(data, centers) 
+    plt.scatter(data2[:, 0], data2[:, 1], c=groundtruth, s=40, cmap='viridis');
   
 
     res_Purity = purity(groundtruth, results) 
